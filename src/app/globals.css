@@ -78,8 +78,6 @@ input {
   align-items: center;
 }
 
-height:67vh;
-
 .actions button,
 .list select {
   text-transform: uppercase;
