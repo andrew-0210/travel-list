@@ -14,18 +14,18 @@ import { Stats } from '../components/Stats';
 export default function Home() {
   const [items, setItems] = useState([]);
 
-  const handleAddItems = item => {
-    setItems(items => [...items, item]);
+  const handleAddItem = newItem => {
+    setItems(exItems => [...exItems, newItem]);
   };
 
-  const handleDeleteItem = itemId => {
-    setItems(items => items.filter(item => item.id !== itemId));
+  const handleDeleteItem = delItemId => {
+    setItems(exItems => exItems.filter(item => item.id !== delItemId));
   };
 
-  const handleToggleItem = itemId => {
-    setItems(items =>
-      items.map(item =>
-        item.id === itemId ? { ...item, packed: !item.packed } : item
+  const handleToggleItem = addedItemId => {
+    setItems(exItems =>
+      exItems.map(item =>
+        item.id === addedItemId ? { ...item, packed: !item.packed } : item
       )
     );
   };
@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       <Logo />
-      <Form onAddItems={handleAddItems} />
+      <Form onAddItems={handleAddItem} />
       <PackagingList
         items={items}
         onDeleteItem={handleDeleteItem}

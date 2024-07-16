@@ -71,7 +71,6 @@ input {
   color: #ffebb3;
   padding: 4rem 0;
   display: flex;
-  
   justify-content: space-between;
   flex-direction: column;
   gap: 3.2rem;
@@ -108,8 +107,6 @@ input[type="checkbox"] {
   width: 2rem;
   accent-color: #e5771f;
 }
-
-
 
 .stats {
   background-color: #76c7ad;
